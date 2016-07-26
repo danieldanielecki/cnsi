@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>Provider list</title>
@@ -19,14 +19,55 @@
             </div>
             <div class="navbar navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#" class="dropdown">My Inbox<span class="caret"></span></a></li>
-                    <li><a href="#" class="dropdown">Admin<span class="caret"></span></a></li>
-                    <li><a href="#" class="dropdown">Provider<span class="caret"></span></a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">My Inbox <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><span class="glyphicon glyphicon-book" aria-hidden="true"></span> MY INBOX</li>
+                            <li><a href="#">My Inbox <span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Admin <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><span class="glyphicon glyphicon-book" aria-hidden="true"></span> USER MAINTENANCE</li>
+                            <li><a href="#">User List <span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li class="dropdown">
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Provider <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><span class="glyphicon glyphicon-book" aria-hidden="true"></span> PROVIDER ENROLLMENT</li>
+                            <li><a href="#">New Enrollment <span class="fa fa-star-o" aria-hidden="true"> </span></a></li>
+                            <li><a href="#">Track Application <span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            <li><a href="#">List Applications <span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            <li class="divider"></li>
+                            <li><span class="glyphicon glyphicon-book" aria-hidden="true"> WORKFLOW MANAGEMENT</span></li>
+                            <li><a href="#">My Task <span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            <li class="divider"></li>
+                            <li><span class="glyphicon glyphicon-book" aria-hidden="true"> MANAGE PROVIDER</span></li>
+                            <li><a href="#">Provider List<span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            <li><a href="#">Provider Modification Request List<span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            <li class="divider"></li>
+                            <li><span class="glyphicon glyphicon-book" aria-hidden="true"> ADMINISTER</span></li>
+                            <li><a href="#">Provider Types <span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </header>
 
         <!-- Navbar. -->
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-collapse">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
 
         <!-- Menu. -->
 
@@ -43,8 +84,9 @@
         <!-- Footer. -->
 
         <!-- JavaScript. -->
-        <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.min.js"></script>
+        <!-- Bootstrap always after jQuery. -->
+        <script src="js/bootstrap.min.js"></script>
         <script src="js/wow.min.js"></script>
         <script type="text/javascript">wow = new WOW({}).init();</script>
     </body>
