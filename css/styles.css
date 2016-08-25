@@ -19,3 +19,21 @@ header {
   margin: 0;
   padding: 0;
 }
+
+select, input, .and {
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.and {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+input {
+  max-width: 120px;
+}
+
+select {
+  max-width: 250px;
+}
