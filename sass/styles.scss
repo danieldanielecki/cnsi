@@ -1,6 +1,9 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
 $background-color: white;
+$border-color: rgba(200, 200, 200, 0.5);
+$border: 1px solid $border-color;
+$border-radius: 4px;
 $open-sans: 'Open Sans', sans-serif;
 
 html, body {
@@ -26,6 +29,47 @@ header {
     }
 }
 
+.btn-close {
+    margin-left: 5px;
+}
+
+section {
+    .container-fluid {
+        border: $border;
+        border-radius: $border-radius;
+        margin: 5px;
+        padding-bottom: 5px;
+
+        .row {
+            .provider-list {
+                border-bottom: $border;
+
+                h4 {
+                    margin-left: 15px;
+                }
+
+                .input-data {
+                    .navbar-form {
+                        &.navbar-left {
+                            .form-group {
+                                border: $border;
+                                border-radius: $border-radius;
+                                padding: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .display-data {
+            table {
+                border: $border;
+            }
+        }
+    }
+}
+
 select, input, .and {
     display: inline-block;
     margin-top: 2px;
@@ -37,7 +81,7 @@ select, input, .and {
 }
 
 input {
-    max-width: 120px;
+    max-width: 115px;
 }
 
 select {
