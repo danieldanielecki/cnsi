@@ -87,3 +87,20 @@ input {
 select {
     max-width: 250px;
 }
+
+.bottom-provider-list {
+    h4 {
+        padding: 7px 0;
+    }
+    h4, input, button {
+        float: left;
+        margin: 0 5px;
+    }
+}
+
+footer {
+    h6 {
+        float: left;
+        margin: 0 5px;
+    }
+}
