@@ -66,6 +66,14 @@ select {
 .bottom-provider-list h4 {
   padding: 7px 0;
 }
+.bottom-provider-list h4.align-center {
+  margin-left: 3em;
+}
+.bottom-provider-list button.align-right {
+  float: right;
+  position: relative;
+  right: 0;
+}
 .bottom-provider-list h4, .bottom-provider-list input, .bottom-provider-list button {
   float: left;
   margin: 0 5px;
@@ -74,4 +82,15 @@ select {
 footer h6 {
   float: left;
   margin: 0 5px;
+}
+footer h6#footer-left {
+  float: left;
+}
+footer h6#footer-center {
+  margin: 0 32em;
+}
+footer h6#footer-right {
+  float: right;
+  position: relative;
+  right: 0;
 }

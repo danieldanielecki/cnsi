@@ -88,9 +88,21 @@ select {
     max-width: 250px;
 }
 
+// Looking for foxy solution.
 .bottom-provider-list {
     h4 {
         padding: 7px 0;
+
+        &.align-center {
+            margin-left: 3em;
+        }
+    }
+    button {
+        &.align-right {
+            float: right;
+            position: relative;
+            right: 0;
+        }
     }
     h4, input, button {
         float: left;
@@ -98,9 +110,25 @@ select {
     }
 }
 
+// Looking for foxy solution.
 footer {
     h6 {
         float: left;
         margin: 0 5px;
+
+        &#{#footer-left} {
+            float: left;
+        }
+
+        &#{#footer-center} {
+            margin: 0 32em;
+        }
+
+        &#{#footer-right} {
+            float: right;
+            position: relative;
+            right: 0;
+        }
     }
 }
+
