@@ -14,6 +14,10 @@ body {
 header {
   margin-bottom: -25px;
 }
+header .navbar.navbar-collapse .nav.navbar-nav .align-right {
+  position: absolute;
+  right: 0;
+}
 
 .navbar.navbar-default {
   margin: 0;
@@ -35,6 +39,11 @@ section .container-fluid .row .provider-list {
 }
 section .container-fluid .row .provider-list h4 {
   margin-left: 15px;
+}
+section .container-fluid .row .provider-list h4 span.align-right {
+  float: right;
+  position: relative;
+  right: 0;
 }
 section .container-fluid .row .provider-list .input-data .navbar-form.navbar-left .form-group {
   border: 1px solid rgba(200, 200, 200, 0.5);

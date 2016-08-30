@@ -20,6 +20,19 @@ body {
 
 header {
     margin-bottom: -25px;
+
+    .navbar {
+        &.navbar-collapse {
+            .nav {
+                &.navbar-nav {
+                    .align-right {
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .navbar {
@@ -46,6 +59,14 @@ section {
 
                 h4 {
                     margin-left: 15px;
+
+                    span {
+                        &.align-right {
+                            float: right;
+                            position: relative;
+                            right: 0;
+                        }
+                    }
                 }
 
                 .input-data {
@@ -131,4 +152,3 @@ footer {
         }
     }
 }
-
