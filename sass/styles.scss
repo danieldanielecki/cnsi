@@ -86,6 +86,14 @@ section {
         .display-data {
             table {
                 border: $border;
+
+                tbody {
+                    tr {
+                        &:nth-child(odd) {
+                            background-color: rgba(220, 220, 220, 0.3);
+                        }
+                    }
+                }
             }
         }
     }
