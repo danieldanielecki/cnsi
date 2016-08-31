@@ -91,6 +91,12 @@ select {
   margin: 0 5px;
 }
 
+footer {
+  background-color: rgba(50, 50, 50, 0.8);
+  color: white;
+  padding: 4px;
+  overflow: auto;
+}
 footer h6 {
   float: left;
   margin: 0 5px;
