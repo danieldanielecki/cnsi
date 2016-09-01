@@ -16,6 +16,7 @@ $open-sans: 'Open Sans', sans-serif;
   transition: $transition;
 }
 
+/* General. */
 html, body {
   height: 100%;
   width: 100%;
@@ -32,6 +33,26 @@ a, button {
   @include transition(ease-in-out 0.6s);
 }
 
+select, input, .and {
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.and {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+input {
+  max-width: 115px;
+}
+
+select {
+  max-width: 250px;
+}
+
+
+/* Header. */
 header {
   margin-bottom: -25px;
 
@@ -49,6 +70,8 @@ header {
   }
 }
 
+
+/* Navbar. */
 .navbar {
   &.navbar-default {
     margin: 0;
@@ -56,11 +79,13 @@ header {
   }
 }
 
-.btn-close {
-  margin-left: 5px;
-}
 
+/* Main content. */
 section {
+  .btn-close {
+    margin-left: 5px;
+  }
+
   .container-fluid {
     border: $border;
     border-radius: $border-radius;
@@ -97,6 +122,7 @@ section {
       }
     }
 
+    /* Display data. */
     .display-data {
       table {
         border: $border;
@@ -113,24 +139,8 @@ section {
   }
 }
 
-select, input, .and {
-  display: inline-block;
-  margin-top: 2px;
-}
 
-.and {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-input {
-  max-width: 115px;
-}
-
-select {
-  max-width: 250px;
-}
-
+/* Bottom of Provider List. */
 // Looking for foxy solution.
 .bottom-provider-list {
   h4 {
@@ -153,6 +163,7 @@ select {
   }
 }
 
+/* Footer. */
 // Looking for foxy solution.
 footer {
   background-color: rgba(50, 50, 50, 0.8);

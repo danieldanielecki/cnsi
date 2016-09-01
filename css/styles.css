@@ -20,6 +20,25 @@ a, button {
   transition: ease-in-out 0.6s;
 }
 
+select, input, .and {
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.and {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+input {
+  max-width: 115px;
+}
+
+select {
+  max-width: 250px;
+}
+
+/* Header. */
 header {
   margin-bottom: -25px;
 }
@@ -28,20 +47,22 @@ header .navbar.navbar-collapse .nav.navbar-nav .align-right {
   right: 0;
 }
 
+/* Navbar. */
 .navbar.navbar-default {
   margin: 0;
   padding: 0;
 }
 
-.btn-close {
+/* Main content. */
+section .btn-close {
   margin-left: 5px;
 }
-
 section .container-fluid {
   border: 1px solid rgba(200, 200, 200, 0.5);
   border-radius: 4px;
   margin: 5px;
   padding-bottom: 5px;
+  /* Display data. */
 }
 section .container-fluid .row .provider-list {
   border-bottom: 1px solid rgba(200, 200, 200, 0.5);
@@ -66,24 +87,7 @@ section .container-fluid .display-data table tbody tr:nth-child(odd) {
   background-color: rgba(220, 220, 220, 0.3);
 }
 
-select, input, .and {
-  display: inline-block;
-  margin-top: 2px;
-}
-
-.and {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-input {
-  max-width: 115px;
-}
-
-select {
-  max-width: 250px;
-}
-
+/* Bottom of Provider List. */
 .bottom-provider-list h4 {
   padding: 7px 0;
 }
@@ -100,6 +104,7 @@ select {
   margin: 0 5px;
 }
 
+/* Footer. */
 footer {
   background-color: rgba(50, 50, 50, 0.8);
   color: white;
