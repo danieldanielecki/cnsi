@@ -2,34 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75acbbe1-96d4-4acd-b208-f9cf1988b57b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/css/style.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.sass-cache/fb24fa113c421ab18904d134df6b9e78c7fed242/styles.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/styles.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/submenu.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/submenu.min.css" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/app/css/bootstrap-theme.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/app/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/app/css/font-awesome.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/app/fonts/FontAwesome.otf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/app/fonts/fontawesome-webfont.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/app/fonts/fontawesome-webfont.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/app/fonts/fontawesome-webfont.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/app/fonts/fontawesome-webfont.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/app/fonts/fontawesome-webfont.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/app/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/app/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/app/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/app/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/app/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/img/logo.png" afterPath="$PROJECT_DIR$/app/img/logo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/app/js/bootstrap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/jquery.min.js" afterPath="$PROJECT_DIR$/app/js/jquery.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sass/styles.scss" afterPath="$PROJECT_DIR$/app/sass/style.scss" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/css/libs.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/css/style.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/libs.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gruntfile.js" afterPath="$PROJECT_DIR$/gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="from_scratch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,13 +30,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+            <state relative-caret-position="-8425">
+              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
               <folding>
-                <element signature="e#26144#26149#0" expanded="true" />
+                <element signature="e#26123#26128#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gruntfile.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gruntfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="223" column="82" selection-start-line="223" selection-start-column="82" selection-end-line="223" selection-end-column="82" />
+            <state relative-caret-position="-173">
+              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -130,8 +108,9 @@
         <option value="$PROJECT_DIR$/app/css/style.min.css" />
         <option value="$PROJECT_DIR$/app/js/libs.min.js" />
         <option value="$PROJECT_DIR$/app/css/style.css" />
-        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/sass/style.scss" />
         <option value="$PROJECT_DIR$/gruntfile.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
       </list>
     </option>
   </component>
@@ -395,12 +374,12 @@
       <workItem from="1473147655962" duration="13844000" />
       <workItem from="1473227010156" duration="15346000" />
       <workItem from="1473311774724" duration="17422000" />
-      <workItem from="1473397176978" duration="4847000" />
+      <workItem from="1473397176978" duration="6630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105387000" />
+    <option name="totallyTimeSpent" value="107170000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -499,7 +478,7 @@
         <state relative-caret-position="1190">
           <caret line="70" column="54" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="54" />
           <folding>
-            <element signature="e#26144#26149#0" expanded="true" />
+            <element signature="e#26123#26128#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -543,7 +522,7 @@
         <state relative-caret-position="1190">
           <caret line="70" column="32" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
           <folding>
-            <element signature="e#26144#26149#0" expanded="true" />
+            <element signature="e#26123#26128#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -571,7 +550,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#26144#26149#0" expanded="true" />
+            <element signature="e#26123#26128#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -668,14 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/sass/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/css/style.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -700,16 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding>
-            <element signature="e#26144#26149#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2635">
@@ -718,11 +679,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="223" column="82" selection-start-line="223" selection-start-column="82" selection-end-line="223" selection-end-column="82" />
+        <state relative-caret-position="-173">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8425">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding>
+            <element signature="e#26123#26128#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

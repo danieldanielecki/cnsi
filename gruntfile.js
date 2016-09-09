@@ -114,14 +114,16 @@ module.exports = function (grunt) {
 
         // Remove unused CSS code in index.html from app/css/style.css and libraries.
         uncss: {
+            // Remove unused CSS from app/css/style.css, need to comment all libraries in index.html and leave only css/style.css. Make it second, in such case comment the first one.
             custom: {
                 files: {
-                    "app/css/style.css" : ["app/index.html"] // Remove unused CSS from app/css/style.css, need to comment all libraries in index.html and leave only css/style.css. Make it second, in such case comment the first one.
+                    "app/css/style.css" : ["app/index.html"]
                 }
             },
+            // Remove unused CSS from all libraries, need to comment css/style.css in index.html and leave only libraries to uncss. Make it first, in such case comment the second one.
             libs: {
                 files: {
-                    "app/css/libs.min.css" : ["app/index.html"] // Remove unused CSS from all libraries, need to comment css/style.css in index.html and leave only libraries to uncss. Make it first, in such case comment the second one.
+                    "app/css/libs.min.css" : ["app/index.html"]
                 }
             }
         },
