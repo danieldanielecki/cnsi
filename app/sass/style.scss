@@ -1,0 +1,202 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+// Variables.
+$background-color: #fff;
+$border-color: rgba(200, 200, 200, .5);
+$border: 1px solid $border-color;
+$border-radius: 4px;
+$footer-color: #fff;
+$footer-background-color: rgba(50, 50, 50, .8);
+$tr-odd-color: rgba(220, 220, 220, .3);
+$open-sans: 'Open Sans', sans-serif;
+
+
+// Mixins.
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin border-radius($border-radius-mixin...) {
+  -webkit-border-radius: $border-radius-mixin;
+  -moz-border-radius: $border-radius-mixin;
+  border-radius: $border-radius-mixin;
+}
+
+// General.
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: $background-color;
+  font-family: $open-sans;
+  font-weight: 400;
+  line-height: 1.6em;
+}
+
+a,
+button {
+  @include transition(ease-in-out .6s);
+}
+
+select,
+input,
+.and {
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.and {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+input {
+  max-width: 115px;
+}
+
+select {
+  max-width: 250px;
+}
+
+
+// Header.
+header {
+  margin-bottom: -25px;
+
+  .navbar.navbar-collapse .nav.navbar-nav .align-right {
+    position: absolute;
+    right: 0;
+  }
+}
+
+
+// Navbar.
+.navbar.navbar-default {
+  margin: 0;
+  padding: 0;
+
+  .container-fluid .row .nav.navbar-nav .dropdown .dropdown-menu .dropdown-submenu {
+    &>.dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin-top: -6px;
+      @include border-radius(0 6px 6px 6px);
+    }
+
+    &:hover > .dropdown-menu {
+      display: block;
+    }
+
+  }
+}
+
+
+// Main content.
+section {
+  .btn-close {
+    margin-left: 5px;
+  }
+
+  .container-fluid {
+    border: $border;
+    border-radius: $border-radius;
+    margin: 5px;
+    padding-bottom: 5px;
+
+    .row .provider-list {
+      border-bottom: $border;
+
+      h4 {
+        margin-left: 15px;
+
+        span {
+          &.align-right {
+            float: right;
+            position: relative;
+            right: 5px;
+          }
+        }
+      }
+
+      // Data to input & choose.
+      .input-data .navbar-form.navbar-left .form-group {
+        border: $border;
+        border-radius: $border-radius;
+        padding: 5px;
+      }
+    }
+
+    .display-data {
+      table {
+        border: $border;
+
+        tbody tr {
+          &:nth-child(odd) {
+            background-color: $tr-odd-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Bottom of Provider List.
+.bottom-provider-list {
+  h4 {
+    padding: 7px 0;
+
+    &.align-center {
+      margin-left: 3em;
+    }
+  }
+
+  button {
+    &.align-right {
+      float: right;
+      position: relative;
+      right: 0;
+    }
+  }
+
+  h4,
+  input,
+  button {
+    float: left;
+    margin: 0 5px;
+  }
+}
+
+// Footer.
+footer {
+  background-color: $footer-background-color;
+  color: $footer-color;
+  overflow: auto;
+  padding: 4px;
+
+  h6 {
+    float: left;
+    margin: 0 5px;
+
+    &#{#footer-left} {
+      float: left;
+    }
+
+    &#{#footer-center} {
+      margin: 0 32em;
+    }
+
+    &#{#footer-right} {
+      float: right;
+      position: relative;
+      right: 0;
+    }
+  }
+}
