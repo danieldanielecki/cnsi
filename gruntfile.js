@@ -55,11 +55,11 @@ module.exports = function (grunt) {
                 },
                 livereload: true
             },
-            // Watch for changes at .html files in app directory.
+            // Watch for changes in .html files.
             watch_html: {
                 files: ["app/*.html"]
             },
-            // Watch for changes at .scss files in app directory.
+            // Watch for changes in .scss files.
             watch_sass: {
                 files: ["app/sass/*.scss"],
                 tasks: ["sass"] // If changes occured, then run sass task (compile from SCSS to CSS).
@@ -92,7 +92,7 @@ module.exports = function (grunt) {
             }
         },
 
-        // Validate .html files within app directory.
+        // Validate .html files before distribution.
         htmllint: {
             all: ["app/*.html"],
             options: {
@@ -112,23 +112,39 @@ module.exports = function (grunt) {
             }
         },
 
-        // Remove unused CSS code in index.html from app/css/style.css and libraries.
+        // Remove unused CSS code.
         uncss: {
-            // Remove unused CSS from app/css/style.css, need to comment all libraries in index.html and leave only css/style.css. Make it second, in such case comment the first one.
-            custom: {
-                files: {
-                    "app/css/style.css" : ["app/index.html"]
-                }
+            options: {
+                // Solving problems with Bootstrap's navbar.
+                ignore: [/\w\.in/,
+                    ".fade",
+                    ".collapse",
+                    ".collapsing",
+                    /(#|\.)navbar(\-[a-zA-Z]+)?/,
+                    /(#|\.)dropdown(\-[a-zA-Z]+)?/,
+                    /(#|\.)(open)/,
+                    ".modal",
+                    ".modal.fade.in",
+                    ".modal-dialog",
+                    ".modal-document",
+                    ".modal-scrollbar-measure",
+                    ".modal-backdrop.fade",
+                    ".modal-backdrop.in",
+                    ".modal.fade.modal-dialog",
+                    ".modal.in.modal-dialog",
+                    ".modal-open",
+                    ".in",
+                    ".modal-backdrop"]
             },
-            // Remove unused CSS from all libraries, need to comment css/style.css in index.html and leave only libraries to uncss. Make it first, in such case comment the second one.
-            libs: {
+            dist: {
                 files: {
-                    "app/css/libs.min.css" : ["app/index.html"]
+                    // All files to uncss should be uncommented in app/index.html, then new file style.css in app/css will be created.
+                    "app/css/style.css" : ["app/index.html"]
                 }
             }
         },
 
-        // Dynamically minify unminified .css files.
+        // Dynamically minify CSS.
         cssmin: {
             my_target: {
                 files: [{
@@ -136,12 +152,12 @@ module.exports = function (grunt) {
                     dest: "app/css",
                     expand: true,
                     ext: ".min.css",
-                    src: ["*.css", "!*.min.css"]
+                    src: ["style.css"]
                 }]
             }
         },
 
-        // Concat all JS libraries minified code in dist/js directory.
+        // Concat all JS minified files.
         concat: {
             options: {
                 banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
@@ -150,7 +166,7 @@ module.exports = function (grunt) {
                 stripBanner: true
             },
             dist: {
-                dest: "app/js/libs.min.js",
+                dest: "app/js/index.min.js",
                 src: ["app/js/jquery.min.js", "app/js/bootstrap.min.js"] // Bootstrap always after jQuery.
             }
         },
@@ -167,17 +183,17 @@ module.exports = function (grunt) {
             }
         },
 
-        // Copy fonts, img directories, 2 CSS minified/concated files and 1 JS minified/concated file from working directory to distribution directory.
+        // Copy necessary resources and files.
         copy: {
             main: {
                 cwd: "app",
                 dest: "dist",
                 expand: true,
-                src: ["fonts/*", "img/*", "css/libs.min.css", "css/style.min.css", "js/libs.min.js"]
+                src: ["fonts/*", "img/*", "css/style.min.css", "js/index.min.js"]
             }
         },
 
-        // Dynamically minify unminified .html files (collapsing whitespaces to 1 space and removing comments). Before using comment/uncomment necessary code in index.html, look for 'CSS./JavaScript' and 'CSS/JavaScript afer Grunt.'.
+        // Dynamically minify unminified .html files. Before using comment/uncomment necessary code in index.html, look for 'CSS./JavaScript' and 'CSS/JavaScript after Grunt.'.
         htmlmin: {
             dist: {
                 options: {
@@ -214,15 +230,15 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-htmlmin");
 
 
-    // Default task - in this check whether or not gruntfile.js changed.
-    grunt.registerTask("default", ["watch:grunt"]);
+    // Default task - in this check make server and check whether or not gruntfile.js changed.
+    grunt.registerTask("default", ["connect:dev", "watch:grunt"]);
 
     // Custom tasks, all tasks are ordered like they should be executed during development life cycle.
     grunt.registerTask("html_dev", ["connect:dev", "watch:watch_html"]); // Task for HTML development.
     grunt.registerTask("css_dev", ["connect:dev", "watch:watch_sass"]); // Task for CSS development.
     grunt.registerTask("quality", ["htmllint", "scsslint"]); // Task for check code quality.
-    grunt.registerTask("optimize_custom", ["uncss:custom", "cssmin"]); // Task for code optimalization custom code.
-    grunt.registerTask("optimize_libs", ["uncss:libs", "cssmin", "concat"]); // Task for code optimalization libraries code.
+    grunt.registerTask("optimize", ["uncss", "cssmin", "concat"]); // Task for code optimalization.
+    grunt.registerTask("beta", ["connect:beta"]); // Task for distribution tests.
     grunt.registerTask("dist", ["imagemin", "copy", "htmlmin"]); // Task for distribution.
     grunt.registerTask("test", ["connect:dist"]); // Task for distribution tests.
 
