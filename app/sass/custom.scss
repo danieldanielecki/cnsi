@@ -130,6 +130,15 @@ section {
         border: $border;
         border-radius: $border-radius;
         padding: 5px;
+
+        .dropdown-menu {
+          box-sizing: border-box;
+          float: right;
+          margin-top: -6px;
+          position: relative;
+
+          @include border-radius(0 6px 6px 6px);
+        }
       }
     }
 
@@ -175,28 +184,68 @@ section {
 }
 
 // Footer.
-footer {
+footer h6 {
   background-color: $footer-background-color;
   color: $footer-color;
-  overflow: auto;
-  padding: 4px;
-
-  h6 {
-    float: left;
-    margin: 0 5px;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 6px;
 
     &#{#footer-left} {
       float: left;
+      width: 33.3%;
     }
 
     &#{#footer-center} {
-      margin: 0 32em;
+      float: left;
+      text-align: center;
+      width: 33.4%;
     }
 
     &#{#footer-right} {
       float: right;
-      position: relative;
-      right: 0;
+      text-align: right;
+      width: 33.3%;
     }
+}
+
+// Media queries.
+@media (max-width: 1135px) {
+  input {
+    max-width: 90px;
+  }
+  select {
+    max-width: 160px;
+  }
+
+  .bottom-provider-list {
+    h4.align-center {
+        margin-left: 0;
+    }
+
+    h4,
+    input,
+    button {
+      float: none;
+      margin: 5px auto;
+    }
+
+    button.align-right {
+      float: none;
+      margin-top: 10px;
+    }
+
+    .first-row {
+      margin: 0 auto;
+      text-align: center;
+    }
+    .second-row {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  footer h6#footer-center {
+    left: 25%;
   }
 }

@@ -108,30 +108,40 @@ section .container-fluid .row .provider-list .input-data .navbar-form.navbar-lef
   border-radius: 4px;
   padding: 5px;
 }
-/* line 137, ../sass/custom.scss */
+/* line 134, ../sass/custom.scss */
+section .container-fluid .row .provider-list .input-data .navbar-form.navbar-left .form-group .dropdown-menu {
+  box-sizing: border-box;
+  float: right;
+  margin-top: -6px;
+  position: relative;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px 6px;
+  border-radius: 0 6px 6px 6px;
+}
+/* line 146, ../sass/custom.scss */
 section .container-fluid .display-data table {
   border: 1px solid rgba(200, 200, 200, 0.5);
 }
-/* line 141, ../sass/custom.scss */
+/* line 150, ../sass/custom.scss */
 section .container-fluid .display-data table tbody tr:nth-child(odd) {
   background-color: rgba(220, 220, 220, 0.3);
 }
 
-/* line 153, ../sass/custom.scss */
+/* line 162, ../sass/custom.scss */
 .bottom-provider-list h4 {
   padding: 7px 0;
 }
-/* line 156, ../sass/custom.scss */
+/* line 165, ../sass/custom.scss */
 .bottom-provider-list h4.align-center {
   margin-left: 3em;
 }
-/* line 162, ../sass/custom.scss */
+/* line 171, ../sass/custom.scss */
 .bottom-provider-list button.align-right {
   float: right;
   position: relative;
   right: 0;
 }
-/* line 169, ../sass/custom.scss */
+/* line 178, ../sass/custom.scss */
 .bottom-provider-list h4,
 .bottom-provider-list input,
 .bottom-provider-list button {
@@ -139,29 +149,72 @@ section .container-fluid .display-data table tbody tr:nth-child(odd) {
   margin: 0 5px;
 }
 
-/* line 178, ../sass/custom.scss */
-footer {
+/* line 187, ../sass/custom.scss */
+footer h6 {
   background-color: rgba(50, 50, 50, 0.8);
   color: #fff;
-  overflow: auto;
-  padding: 4px;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 6px;
 }
-/* line 184, ../sass/custom.scss */
-footer h6 {
-  float: left;
-  margin: 0 5px;
-}
-/* line 188, ../sass/custom.scss */
+/* line 194, ../sass/custom.scss */
 footer h6#footer-left {
   float: left;
+  width: 33.3%;
 }
-/* line 192, ../sass/custom.scss */
+/* line 199, ../sass/custom.scss */
 footer h6#footer-center {
-  margin: 0 32em;
+  float: left;
+  text-align: center;
+  width: 33.4%;
 }
-/* line 196, ../sass/custom.scss */
+/* line 205, ../sass/custom.scss */
 footer h6#footer-right {
   float: right;
-  position: relative;
-  right: 0;
+  text-align: right;
+  width: 33.3%;
+}
+
+@media (max-width: 1135px) {
+  /* line 214, ../sass/custom.scss */
+  input {
+    max-width: 90px;
+  }
+
+  /* line 217, ../sass/custom.scss */
+  select {
+    max-width: 160px;
+  }
+
+  /* line 222, ../sass/custom.scss */
+  .bottom-provider-list h4.align-center {
+    margin-left: 0;
+  }
+  /* line 226, ../sass/custom.scss */
+  .bottom-provider-list h4,
+  .bottom-provider-list input,
+  .bottom-provider-list button {
+    float: none;
+    margin: 5px auto;
+  }
+  /* line 233, ../sass/custom.scss */
+  .bottom-provider-list button.align-right {
+    float: none;
+    margin-top: 10px;
+  }
+  /* line 238, ../sass/custom.scss */
+  .bottom-provider-list .first-row {
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* line 242, ../sass/custom.scss */
+  .bottom-provider-list .second-row {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* line 248, ../sass/custom.scss */
+  footer h6#footer-center {
+    left: 25%;
+  }
 }
