@@ -26,45 +26,70 @@ button {
 }
 
 /* line 48, ../sass/custom.scss */
+button:hover {
+  background-color: #e8e8e8 !important;
+}
+
+/* line 52, ../sass/custom.scss */
+select,
+input,
+button {
+  background-color: #f8f8f8 !important;
+  margin-top: 10px !important;
+}
+
+/* line 59, ../sass/custom.scss */
 select,
 input,
 .and {
   display: inline-block;
-  margin-top: 2px;
 }
 
-/* line 55, ../sass/custom.scss */
+/* line 65, ../sass/custom.scss */
 .and {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px 10px 0 10px !important;
 }
 
-/* line 60, ../sass/custom.scss */
+/* line 69, ../sass/custom.scss */
 input {
   max-width: 115px;
 }
 
-/* line 64, ../sass/custom.scss */
+/* line 73, ../sass/custom.scss */
 select {
   max-width: 250px;
 }
 
-/* line 70, ../sass/custom.scss */
+/* line 77, ../sass/custom.scss */
+img {
+  margin: 5px;
+}
+
+/* line 83, ../sass/custom.scss */
 header {
   margin-bottom: -25px;
 }
-/* line 73, ../sass/custom.scss */
+/* line 86, ../sass/custom.scss */
+header .navbar.navbar-collapse .nav.navbar-nav {
+  font-size: 18px;
+}
+/* line 89, ../sass/custom.scss */
 header .navbar.navbar-collapse .nav.navbar-nav .align-right {
   position: absolute;
   right: 0;
 }
 
-/* line 81, ../sass/custom.scss */
+/* line 98, ../sass/custom.scss */
 .navbar.navbar-default {
   margin: 0;
   padding: 0;
 }
-/* line 86, ../sass/custom.scss */
+/* line 102, ../sass/custom.scss */
+.navbar.navbar-default ul.nav.navbar-nav {
+  float: right;
+  margin-right: 50px;
+}
+/* line 108, ../sass/custom.scss */
 .navbar.navbar-default .container-fluid .row .nav.navbar-nav .dropdown .dropdown-menu .dropdown-submenu > .dropdown-menu {
   top: 0;
   left: 100%;
@@ -73,66 +98,81 @@ header .navbar.navbar-collapse .nav.navbar-nav .align-right {
   -moz-border-radius: 0 6px 6px 6px;
   border-radius: 0 6px 6px 6px;
 }
-/* line 93, ../sass/custom.scss */
+/* line 115, ../sass/custom.scss */
 .navbar.navbar-default .container-fluid .row .nav.navbar-nav .dropdown .dropdown-menu .dropdown-submenu:hover > .dropdown-menu {
   display: block;
 }
 
-/* line 103, ../sass/custom.scss */
+/* line 125, ../sass/custom.scss */
 section .btn-close {
   margin-left: 5px;
 }
-/* line 107, ../sass/custom.scss */
+/* line 129, ../sass/custom.scss */
 section .container-fluid {
   border: 1px solid rgba(200, 200, 200, 0.5);
   border-radius: 4px;
   margin: 5px;
   padding-bottom: 5px;
 }
-/* line 113, ../sass/custom.scss */
+/* line 135, ../sass/custom.scss */
 section .container-fluid .row .provider-list {
   border-bottom: 1px solid rgba(200, 200, 200, 0.5);
 }
-/* line 116, ../sass/custom.scss */
+/* line 138, ../sass/custom.scss */
 section .container-fluid .row .provider-list h4 {
   margin-left: 15px;
+  text-align: center;
 }
-/* line 120, ../sass/custom.scss */
+/* line 143, ../sass/custom.scss */
 section .container-fluid .row .provider-list h4 span.align-right {
   float: right;
   position: relative;
   right: 5px;
 }
-/* line 129, ../sass/custom.scss */
+/* line 152, ../sass/custom.scss */
 section .container-fluid .row .provider-list .input-data .navbar-form.navbar-left .form-group {
   border: 1px solid rgba(200, 200, 200, 0.5);
   border-radius: 4px;
   padding: 5px;
 }
-/* line 137, ../sass/custom.scss */
+/* line 157, ../sass/custom.scss */
+section .container-fluid .row .provider-list .input-data .navbar-form.navbar-left .form-group .dropdown-menu {
+  box-sizing: border-box;
+  float: right;
+  margin-top: -6px;
+  position: relative;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px 6px;
+  border-radius: 0 6px 6px 6px;
+}
+/* line 169, ../sass/custom.scss */
 section .container-fluid .display-data table {
   border: 1px solid rgba(200, 200, 200, 0.5);
 }
-/* line 141, ../sass/custom.scss */
+/* line 173, ../sass/custom.scss */
 section .container-fluid .display-data table tbody tr:nth-child(odd) {
   background-color: rgba(220, 220, 220, 0.3);
 }
-
-/* line 153, ../sass/custom.scss */
-.bottom-provider-list h4 {
-  padding: 7px 0;
+/* line 176, ../sass/custom.scss */
+section .container-fluid .display-data table tbody tr td {
+  font-size: 12px;
 }
-/* line 156, ../sass/custom.scss */
+
+/* line 188, ../sass/custom.scss */
+.bottom-provider-list h4 {
+  padding: 17px 0;
+}
+/* line 191, ../sass/custom.scss */
 .bottom-provider-list h4.align-center {
   margin-left: 3em;
 }
-/* line 162, ../sass/custom.scss */
+/* line 197, ../sass/custom.scss */
 .bottom-provider-list button.align-right {
   float: right;
   position: relative;
   right: 0;
 }
-/* line 169, ../sass/custom.scss */
+/* line 204, ../sass/custom.scss */
 .bottom-provider-list h4,
 .bottom-provider-list input,
 .bottom-provider-list button {
@@ -140,31 +180,173 @@ section .container-fluid .display-data table tbody tr:nth-child(odd) {
   margin: 0 5px;
 }
 
-/* line 178, ../sass/custom.scss */
-footer {
+/* line 213, ../sass/custom.scss */
+footer h6 {
   background-color: rgba(50, 50, 50, 0.8);
   color: #fff;
-  overflow: auto;
-  padding: 4px;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 6px;
 }
-/* line 184, ../sass/custom.scss */
-footer h6 {
-  float: left;
-  margin: 0 5px;
-}
-/* line 188, ../sass/custom.scss */
+/* line 220, ../sass/custom.scss */
 footer h6#footer-left {
   float: left;
+  width: 33.3%;
 }
-/* line 192, ../sass/custom.scss */
+/* line 225, ../sass/custom.scss */
 footer h6#footer-center {
-  margin: 0 32em;
+  float: left;
+  text-align: center;
+  width: 33.4%;
 }
-/* line 196, ../sass/custom.scss */
+/* line 231, ../sass/custom.scss */
 footer h6#footer-right {
   float: right;
-  position: relative;
-  right: 0;
+  text-align: right;
+  width: 33.3%;
+}
+
+@media (max-width: 1135px) {
+  /* line 241, ../sass/custom.scss */
+  input {
+    width: 90px;
+  }
+
+  /* line 244, ../sass/custom.scss */
+  select {
+    width: 160px;
+  }
+
+  /* line 248, ../sass/custom.scss */
+  .navbar.navbar-default ul.nav.navbar-nav {
+    margin-left: 0%;
+  }
+
+  /* line 253, ../sass/custom.scss */
+  .bottom-provider-list h4.align-center {
+    margin-left: 0;
+  }
+  /* line 257, ../sass/custom.scss */
+  .bottom-provider-list h4,
+  .bottom-provider-list input,
+  .bottom-provider-list button {
+    float: none;
+    margin: 5px auto;
+  }
+  /* line 264, ../sass/custom.scss */
+  .bottom-provider-list button.align-right {
+    float: none;
+    margin-top: 10px;
+  }
+  /* line 269, ../sass/custom.scss */
+  .bottom-provider-list .first-row {
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* line 273, ../sass/custom.scss */
+  .bottom-provider-list .second-row {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* line 279, ../sass/custom.scss */
+  footer h6#footer-center {
+    left: 25%;
+  }
+}
+@media (max-width: 910px) {
+  /* line 285, ../sass/custom.scss */
+  .navbar.navbar-default ul.nav.navbar-nav {
+    float: left;
+    font-size: 11px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  /* line 293, ../sass/custom.scss */
+  select, input {
+    display: block;
+    max-width: 70%;
+    margin: 10px auto !important;
+    text-align: center;
+  }
+
+  /* line 300, ../sass/custom.scss */
+  button {
+    display: block !important;
+    margin: 10px auto !important;
+    text-align: center;
+    width: 60%;
+  }
+
+  /* line 307, ../sass/custom.scss */
+  .and {
+    display: none;
+  }
+
+  /* line 311, ../sass/custom.scss */
+  img {
+    display: block;
+    margin: 5px auto -25px;
+    text-align: center;
+  }
+
+  /* line 317, ../sass/custom.scss */
+  .navbar.navbar-default ul.nav.navbar-nav {
+    float: none;
+    font-size: 14px;
+    margin-right: 0;
+  }
+
+  /* line 323, ../sass/custom.scss */
+  .navbar.navbar-collapse {
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+  }
+  /* line 328, ../sass/custom.scss */
+  .navbar.navbar-collapse li {
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* line 332, ../sass/custom.scss */
+  .navbar.navbar-collapse li a span.glyphicon.glyphicon-menu-left {
+    display: none;
+  }
+  /* line 335, ../sass/custom.scss */
+  .navbar.navbar-collapse li a span.glyphicon.glyphicon-menu-right {
+    display: none;
+  }
+
+  /* line 341, ../sass/custom.scss */
+  .navbar.navbar-default {
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* line 345, ../sass/custom.scss */
+  .navbar.navbar-default li {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* line 351, ../sass/custom.scss */
+  .breadcrumb {
+    margin: 5px auto 0;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  /* line 358, ../sass/custom.scss */
+  button {
+    margin: 5px auto !important;
+    width: 80%;
+  }
+
+  /* line 363, ../sass/custom.scss */
+  select, input {
+    margin: 5px auto !important;
+    max-width: 90%;
+  }
 }
  
 /*** uncss> filename: app/css/bootstrap-theme.css ***/

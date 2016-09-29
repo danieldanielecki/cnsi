@@ -45,16 +45,25 @@ button {
   @include transition(ease-in-out .6s);
 }
 
+button:hover {
+  background-color: #e8e8e8!important;
+}
+
+select,
+input,
+button {
+  background-color: #f8f8f8!important;
+  margin-top: 10px!important;
+}
+
 select,
 input,
 .and {
   display: inline-block;
-  margin-top: 2px;
 }
 
 .and {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px 10px 0 10px!important;
 }
 
 input {
@@ -65,14 +74,22 @@ select {
   max-width: 250px;
 }
 
+img {
+  margin: 5px;
+}
+
 
 // Header.
 header {
   margin-bottom: -25px;
 
-  .navbar.navbar-collapse .nav.navbar-nav .align-right {
-    position: absolute;
-    right: 0;
+  .navbar.navbar-collapse .nav.navbar-nav {
+    font-size: 18px;
+
+    .align-right {
+      position: absolute;
+      right: 0;
+    }
   }
 }
 
@@ -82,8 +99,13 @@ header {
   margin: 0;
   padding: 0;
 
+  ul.nav.navbar-nav {
+    float: right;
+    margin-right: 50px;
+  }
+
   .container-fluid .row .nav.navbar-nav .dropdown .dropdown-menu .dropdown-submenu {
-    &>.dropdown-menu {
+    & > .dropdown-menu {
       top: 0;
       left: 100%;
       margin-top: -6px;
@@ -115,6 +137,7 @@ section {
 
       h4 {
         margin-left: 15px;
+        text-align: center;
 
         span {
           &.align-right {
@@ -150,6 +173,9 @@ section {
           &:nth-child(odd) {
             background-color: $tr-odd-color;
           }
+          td {
+            font-size: 12px;
+          }
         }
       }
     }
@@ -160,7 +186,7 @@ section {
 // Bottom of Provider List.
 .bottom-provider-list {
   h4 {
-    padding: 7px 0;
+    padding: 17px 0;
 
     &.align-center {
       margin-left: 3em;
@@ -209,13 +235,18 @@ footer h6 {
     }
 }
 
-// Media queries.
+// Media queries (MQ).
+// MQ for buttons.
 @media (max-width: 1135px) {
   input {
-    max-width: 90px;
+    width: 90px;
   }
   select {
-    max-width: 160px;
+    width: 160px;
+  }
+
+  .navbar.navbar-default ul.nav.navbar-nav {
+    margin-left: 0%;
   }
 
   .bottom-provider-list {
@@ -247,5 +278,90 @@ footer h6 {
 
   footer h6#footer-center {
     left: 25%;
+  }
+}
+// MQ for navbar.
+@media (max-width: 910px) {
+  .navbar.navbar-default ul.nav.navbar-nav {
+    float: left;
+    font-size: 11px;
+    margin-right: 0;
+  }
+}
+// MQ for tablets.
+@media (max-width: 768px) {
+  select, input {
+    display: block;
+    max-width: 70%;
+    margin: 10px auto!important;
+    text-align: center;
+  }
+
+  button {
+    display: block!important;
+    margin: 10px auto!important;
+    text-align: center;
+    width: 60%;
+  }
+
+  .and {
+    display: none;
+  }
+
+  img {
+    display: block;
+    margin: 5px auto -25px;
+    text-align: center;
+  }
+
+  .navbar.navbar-default ul.nav.navbar-nav {
+    float: none;
+    font-size: 14px;
+    margin-right: 0;
+  }
+
+  .navbar.navbar-collapse {
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+
+    li {
+      margin: 0 auto;
+      text-align: center;
+
+      a span.glyphicon.glyphicon-menu-left {
+        display: none;
+      }
+      a span.glyphicon.glyphicon-menu-right {
+        display: none;
+      }
+    }
+  }
+
+  .navbar.navbar-default {
+    margin: 0 auto;
+    text-align: center;
+
+    li {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  .breadcrumb {
+    margin: 5px auto 0;
+    text-align: center;
+  }
+}
+// MQ for smartphones.
+@media (max-width: 480px) {
+  button {
+    margin: 5px auto!important;
+    width: 80%;
+  }
+
+  select, input {
+    margin: 5px auto!important;
+    max-width: 90%;
   }
 }
