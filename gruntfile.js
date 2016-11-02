@@ -167,7 +167,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 dest: "app/js/index.min.js",
-                src: ["app/js/jquery.min.js", "app/js/bootstrap.min.js"] // Bootstrap always after jQuery.
+                src: ["app/js/jquery.min.js", "app/js/bootstrap.min.js", "app/js/jquery.nicescroll.min.js", "app/js/custom.js"] // Bootstrap always after jQuery.
             }
         },
 

@@ -1,12 +1,13 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
 // Variables.
-$background-color: #fff;
+$alabaster: #f8f8f8;
 $border-color: rgba(200, 200, 200, .5);
 $border: 1px solid $border-color;
 $border-radius: 4px;
-$footer-color: #fff;
+$white: #fff;
 $footer-background-color: rgba(50, 50, 50, .8);
+$mercury: #e8e8e8;
 $tr-odd-color: rgba(220, 220, 220, .3);
 $open-sans: 'Open Sans', sans-serif;
 
@@ -34,7 +35,7 @@ body {
 }
 
 body {
-  color: $background-color;
+  color: $white;
   font-family: $open-sans;
   font-weight: 400;
   line-height: 1.6em;
@@ -46,14 +47,14 @@ button {
 }
 
 button:hover {
-  background-color: #e8e8e8!important;
+  background-color: $mercury !important;
 }
 
 select,
 input,
 button {
-  background-color: #f8f8f8!important;
-  margin-top: 10px!important;
+  background-color: $alabaster !important;
+  margin-top: 10px !important;
 }
 
 select,
@@ -63,7 +64,7 @@ input,
 }
 
 .and {
-  margin: 10px 10px 0 10px!important;
+  margin: 10px 10px 0 !important;
 }
 
 input {
@@ -99,23 +100,24 @@ header {
   margin: 0;
   padding: 0;
 
-  ul.nav.navbar-nav {
-    float: right;
-    margin-right: 50px;
+  ul {
+    &.nav.navbar-nav {
+      float: right;
+      margin-right: 50px;
+    }
   }
 
   .container-fluid .row .nav.navbar-nav .dropdown .dropdown-menu .dropdown-submenu {
-    & > .dropdown-menu {
-      top: 0;
+    > .dropdown-menu {
+      @include border-radius(0 6px 6px 6px);
       left: 100%;
       margin-top: -6px;
-      @include border-radius(0 6px 6px 6px);
+      top: 0;
     }
 
     &:hover > .dropdown-menu {
       display: block;
     }
-
   }
 }
 
@@ -155,12 +157,11 @@ section {
         padding: 5px;
 
         .dropdown-menu {
+          @include border-radius(0 6px 6px 6px);
           box-sizing: border-box;
           float: right;
           margin-top: -6px;
           position: relative;
-
-          @include border-radius(0 6px 6px 6px);
         }
       }
     }
@@ -174,6 +175,7 @@ section {
           &:nth-child(odd) {
             background-color: $tr-odd-color;
           }
+
           td {
             font-size: 12px;
           }
@@ -183,7 +185,8 @@ section {
   }
 }
 
-td, th {
+td,
+th {
   text-align: left;
 }
 
@@ -217,27 +220,27 @@ td, th {
 // Footer.
 footer h6 {
   background-color: $footer-background-color;
-  color: $footer-color;
+  color: $white;
   display: inline-block;
   margin: 0 auto;
   padding: 6px;
 
-    &#{#footer-left} {
-      float: left;
-      width: 33.3%;
-    }
+  &#{#footer-left} {
+    float: left;
+    width: 33.3%;
+  }
 
-    &#{#footer-center} {
-      float: left;
-      text-align: center;
-      width: 33.4%;
-    }
+  &#{#footer-center} {
+    float: left;
+    text-align: center;
+    width: 33.4%;
+  }
 
-    &#{#footer-right} {
-      float: right;
-      text-align: right;
-      width: 33.3%;
-    }
+  &#{#footer-right} {
+    float: right;
+    text-align: right;
+    width: 33.3%;
+  }
 }
 
 // Media queries (MQ).
@@ -246,17 +249,22 @@ footer h6 {
   input {
     width: 90px;
   }
+
   select {
     width: 160px;
   }
 
-  .navbar.navbar-default ul.nav.navbar-nav {
-    margin-left: 0%;
+  .navbar.navbar-default ul {
+    &.nav.navbar-nav {
+      margin-left: 0;
+    }
   }
 
   .bottom-provider-list {
-    h4.align-center {
+    h4 {
+      &.align-center {
         margin-left: 0;
+      }
     }
 
     h4,
@@ -266,45 +274,54 @@ footer h6 {
       margin: 5px auto;
     }
 
-    button.align-right {
-      float: none;
-      margin-top: 10px;
+    button {
+      &.align-right {
+        float: none;
+        margin-top: 10px;
+      }
     }
 
     .first-row {
       margin: 0 auto;
       text-align: center;
     }
+
     .second-row {
       margin: 0 auto;
       text-align: center;
     }
   }
 
-  footer h6#footer-center {
-    left: 25%;
+  footer h6 {
+    &#{#footer-center} {
+      left: 25%;
+    }
   }
 }
 // MQ for navbar.
 @media (max-width: 910px) {
-  .navbar.navbar-default ul.nav.navbar-nav {
-    float: left;
-    font-size: 11px;
-    margin-right: 0;
+  .navbar.navbar-default
+  ul {
+    &.nav.navbar-nav {
+      float: left;
+      font-size: 11px;
+      margin-right: 0;
+    }
   }
 }
 // MQ for tablets.
 @media (max-width: 768px) {
-  select, input {
+  select,
+  input {
     display: block;
+    margin: 10px auto !important;
     max-width: 70%;
-    margin: 10px auto!important;
     text-align: center;
   }
 
   button {
-    display: block!important;
-    margin: 10px auto!important;
+    display: block !important;
+    margin: 10px auto !important;
     text-align: center;
     width: 60%;
   }
@@ -319,10 +336,13 @@ footer h6 {
     text-align: center;
   }
 
-  .navbar.navbar-default ul.nav.navbar-nav {
-    float: none;
-    font-size: 14px;
-    margin-right: 0;
+  .navbar.navbar-default
+  ul {
+    &.nav.navbar-nav {
+      float: none;
+      font-size: 14px;
+      margin-right: 0;
+    }
   }
 
   .navbar.navbar-collapse {
@@ -334,11 +354,14 @@ footer h6 {
       margin: 0 auto;
       text-align: center;
 
-      a span.glyphicon.glyphicon-menu-left {
-        display: none;
-      }
-      a span.glyphicon.glyphicon-menu-right {
-        display: none;
+      a span {
+        &.glyphicon.glyphicon-menu-left {
+          display: none;
+        }
+
+        &.glyphicon.glyphicon-menu-right {
+          display: none;
+        }
       }
     }
   }
@@ -358,7 +381,11 @@ footer h6 {
     text-align: center;
   }
 
-  table, thead, tbody, tr, td {
+  table,
+  thead,
+  tbody,
+  tr,
+  td {
     display: block;
   }
 
@@ -369,38 +396,39 @@ footer h6 {
   }
 
   td {
-    border: none!important;
+    border: none !important;
     height: 30px;
-    padding-left: 50%!important;
+    padding-left: 50% !important;
     position: relative;
 
-    &:before {
+    &::before {
       left: 6px;
       padding-right: 10px;
       position: absolute;
       top: 6px;
-      width: 45%;
       white-space: nowrap;
+      width: 45%;
     }
 
-    &:nth-of-type(1):before { content: "Provider ID"; }
-    &:nth-of-type(2):before { content: "Provider Name"; }
-    &:nth-of-type(3):before { content: "NPI"; }
-    &:nth-of-type(4):before { content: "Start Date"; }
-    &:nth-of-type(5):before { content: "End Date"; }
-    &:nth-of-type(6):before { content: "Enrollment Type"; }
-    &:nth-of-type(7):before { content: "Business Status"; }
+    &:nth-of-type(1)::before { content: 'Provider ID'; }
+    &:nth-of-type(2)::before { content: 'Provider Name'; }
+    &:nth-of-type(3)::before { content: 'NPI'; }
+    &:nth-of-type(4)::before { content: 'Start Date'; }
+    &:nth-of-type(5)::before { content: 'End Date'; }
+    &:nth-of-type(6)::before { content: 'Enrollment Type'; }
+    &:nth-of-type(7)::before { content: 'Business Status'; }
   }
 }
 // MQ for smartphones.
 @media (max-width: 480px) {
   button {
-    margin: 5px auto!important;
+    margin: 5px auto !important;
     width: 80%;
   }
 
-  select, input {
-    margin: 5px auto!important;
+  select,
+  input {
+    margin: 5px auto !important;
     max-width: 90%;
   }
 }
